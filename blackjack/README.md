@@ -1,2 +1,2 @@
-# blackjack
- first project with object oriented programming with python
+# REPOSITORY MOVED
+ I decided to use this project as my CS50's Introduction to Programming with Python Final Project. So, I moved this project to it's own repository at [blackjack](https://github.com/pompom-cl/blackjack)
