@@ -5,14 +5,13 @@ def main():
     key = get_key()
 
     if mode == 'E':
-        encrypt(get_string("Enter the message to encrypt"), key)
+        string = get_string("Enter the message to encrypt")
+        text = ''.join([ALPHAS[(ALPHAS.index(c) + key) % 26] for c in string])
     elif mode == 'D':
-        decrypt(get_string("Enter the message to decrypt"), key)
+        string = get_string("Enter the message to decrypt")
+        text = ''.join([ALPHAS[(ALPHAS.index(c) - key) % 26] for c in string])
 
-    print()
-    input("> ")
-    print("Full encrypted text copied to clipboard")
-    print()
+    print(text)
 
 
 def get_mode():
@@ -32,16 +31,12 @@ def get_key():
                 return int(key)
 
 
-def get_string():
-
-
-
-def encrypt(string, key):
-
-
-
-def decrypt(string, key)
-
+def get_string(message):
+    while True:
+        print(message)
+        string = input("> ").upper()
+        if string.isalpha():
+            return string
 
 
 if __name__ == "__main__":
